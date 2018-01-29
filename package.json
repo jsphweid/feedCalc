@@ -7,7 +7,7 @@
     "clean": "rm -rf ./dist/",
     "start": "npm run clean && webpack-dev-server",
     "build": "npm run clean && webpack",
-    "deploy": "npm run build && cat 'finish this'",
+    "deploy": "npm run build && ./deploy.sh",
     "analyze:size": "NODE_ENV=fakerun webpack --config webpack.config.js"
   },
   "repository": {
