@@ -1,0 +1,143 @@
+<html>
+    <head>
+   	 	<meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+        <link href="toastr.css" rel="stylesheet"/>
+		<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css"> -->
+		<!-- <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script> -->
+        <!-- <script type="text/javascript" src="feedByRandom.js"></script> -->
+		<style>
+			.progress-bar-without-transition {
+				float: left;
+				width: 0;
+				height: 100%;
+				font-size: 12px;
+				line-height: 20px;
+				color: #fff;
+				text-align: center;
+				background-color: #428bca;
+				-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+				box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+			}
+		</style>
+    </head>
+
+
+    <body class="row-container">
+    <div class="row">
+    <div class="col-sm-offset-1 col-sm-10">
+
+    <div class="row">
+
+	<div class="col-sm-3">
+	    <table class='table table-striped'>
+    		<thead>
+    			<tr>
+  					<th>Stuff to<br>input</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Target Protein %</td>
+					<td>
+						<select id="targetProtein">
+							<option value="layer">16% - Layer Ration</option>
+							<option value="grower">18% - Grower Ration</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Iterations</td>
+					<td>
+  						<input type="text" id="amount" style="border:0; readonly color:#f6931f; font-weight:bold;">
+						<div id="iterations"></div>
+					</td>
+				</tr>
+			</tbody>
+		</table><br><br><br><br><br><br>
+		<table class='table table-striped'>
+    		<thead>
+	    		<tr>
+	    			<th>Result<br>Table</th>
+				</tr>
+	    		<tr>
+	    			<th>Name</th>
+	    			<th>Amount</th>
+				</tr>    	
+			</thead>
+			<tbody>
+				<tr>
+					<td>Protein</td>
+					<td id="pp-result"></td>
+				</tr>
+				<tr>
+					<td>Price / lb</td>
+					<td id="lb-result"></td>
+				</tr>
+				<tr>
+					<td>Price / 50lb</td>
+					<td id="50lb-result"></td>
+				</tr>
+				<tr>
+					<td>Price / 40lb</td>
+					<td id="40lb-result"></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div><br />Credits---<br />Joseph Weidinger: idea and logic (javascript)<br /> Clayton Weidinger: design and plumbing (html, js, css, angular)</div>
+
+		<div id="poundsDiv" style='opacity:0;'>
+			<span>Pounds</span>
+			<span id="numLbs" class="alert"></span>
+			<br />
+			<br />
+			<span>*Readjust the percentages of each until it adds up to 100 for the results to be useful.</span>
+		</div>
+	</div>
+
+
+    <div class="col-sm-7">
+
+    	<table class='table table-striped'>
+    		<thead>
+    		<tr id='addr0'>
+    			<th>Name</th>
+    			<th>% Protein Content</th>
+    			<th>Price / lb</th>
+    			<th>Min % of Ingredient</th>
+    			<th>Max % of Ingredient</th>
+    			<th>% of each Ingredient</th>
+			</tr>
+			</thead>
+			<tbody id='table-body'>
+			</tbody>
+		</table>
+		<a id="new_row" class="btn btn-default pull-left">New Ingredient</a>
+		<a id="add_row" class="btn btn-default pull-left">Add</a>
+		<br/><br/><br/>
+        <!-- <input type="text" id="typey_box" /> -->
+        <button id="butt">Process!</button>
+        <button id="stop">Stop</button><br/><br/>
+
+        <div class="progress">
+        <!-- progress-bar-striped active --> <!-- was progress-bar-joseph -->
+		  <div id="pb" class="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+		    <span class=""><span id="percentDone">0</span>% Complete</span>
+		  </div>
+		</div>
+    </div>
+   
+    </div>
+
+
+
+
+    		
+    	</div>
+    	<div class="col-sm-1"></div>
+    </div>
+    </body>
+</html>
+
