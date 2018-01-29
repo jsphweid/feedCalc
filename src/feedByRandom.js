@@ -2,11 +2,13 @@ const toastr = require('toastr')
 const $ = require('jquery')
 require('jquery-ui/themes/base/core.css')
 require('jquery-ui/themes/base/theme.css')
-require('jquery-ui/themes/base/selectable.css')
 require('jquery-ui/ui/core')
-// require('jquery-ui/ui/widgets/selectable')
 require('jquery-ui/ui/widgets/slider')
 require('jquery-ui/themes/base/slider.css')
+
+require('./toastr.css')
+require('./main.css')
+
 
 // --------------------------- PUTS TOGETHER DYNAMIC ELEMENTS OF THE PAGE ------------------------------//
 $(document).ready(function() {

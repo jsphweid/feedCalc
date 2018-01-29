@@ -1,0 +1,42 @@
+.progress-bar-without-transition {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #428bca;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+}
+
+body {
+    padding: 16px;
+}
+
+.progress-bar {
+	height: 20px;
+}
+
+.progress {
+	height: initial;
+}
+
+.feedCalc-tables {
+    display: inline-flex;
+}
+
+@media only screen and ( max-width: 900px ) {
+    .feedCalc-tables {
+        display: block;
+    }
+}
+
+.feedCalc-smallTables {
+    height: 100%;
+}
+
+.feedCalc-mainTables {
+
+}
