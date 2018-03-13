@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jsphweid/feedCalc#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^4.3.1",
+    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.9",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
